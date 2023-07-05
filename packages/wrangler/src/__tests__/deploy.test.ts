@@ -5237,8 +5237,8 @@ addEventListener('fetch', event => {});`
 			  - WASM_MODULE_ONE: some_wasm.wasm
 			  - WASM_MODULE_TWO: more_wasm.wasm
 			- Unsafe Metadata:
-			  - extra_data: interesting value
-			  - more_data: dubious value
+			  - extra_data: \\"interesting value\\"
+			  - more_data: \\"dubious value\\"
 			Uploaded test-name (TIMINGS)
 			Published test-name (TIMINGS)
 			  https://test-name.test-sub-domain.workers.dev
@@ -6618,6 +6618,49 @@ addEventListener('fetch', event => {});`
 		});
 
 		describe("[unsafe]", () => {
+			it("should stringify object in unsafe binding", async () => {
+				writeWranglerToml({
+					unsafe: {
+						bindings: [
+							{
+								name: "my-binding",
+								type: "binding-type-Object",
+								param: "binding-param",
+							},
+						],
+						metadata: {
+							stringify: true,
+							something: "else",
+							undefined: undefined,
+							null: null,
+							nested: {
+								stuff: "here",
+							},
+						},
+					},
+				});
+				writeWorkerSource();
+				mockSubDomainRequest();
+				mockUploadWorkerRequest({
+					expectedBindings: [
+						{
+							name: "my-binding",
+							type: "binding-type",
+							param: "binding-param",
+						},
+					],
+				});
+				expect(std.out).toMatchInlineSnapshot(`
+			"Total Upload: xx KiB / gzip: xx KiB
+			Your worker has access to the following bindings:
+			- Unsafe:
+			  - binding-type: my-binding
+			Uploaded test-name (TIMINGS)
+			Published test-name (TIMINGS)
+			  https://test-name.test-sub-domain.workers.dev
+			Current Deployment ID: Galaxy-Class"
+		`);
+			});
 			it("should warn if using unsafe bindings", async () => {
 				writeWranglerToml({
 					unsafe: {
