@@ -1,5 +1,6 @@
-import { describe, expect, it, beforeAll, afterAll } from "vitest";
-import { UnstableDevWorker, unstable_dev } from "wrangler";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { unstable_dev, UnstableDevWorker } from "wrangler";
+
 describe("Service Bindings", () => {
 	let aWorker: UnstableDevWorker;
 

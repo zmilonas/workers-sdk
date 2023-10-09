@@ -1,5 +1,5 @@
-import { now } from "./dep";
 import { randomBytes } from "isomorphic-random-example";
+import { now } from "./dep";
 
 console.log("startup log");
 

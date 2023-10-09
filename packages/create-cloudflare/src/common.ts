@@ -11,7 +11,7 @@ import {
 	startSection,
 	updateStatus,
 } from "@cloudflare/cli";
-import { brandColor, dim, gray, bgGreen, blue } from "@cloudflare/cli/colors";
+import { bgGreen, blue, brandColor, dim, gray } from "@cloudflare/cli/colors";
 import { inputPrompt, spinner } from "@cloudflare/cli/interactive";
 import { getFrameworkCli } from "frameworks/index";
 import { processArgument } from "helpers/args";

@@ -1,15 +1,15 @@
 import { exit } from "process";
 import {
+	bgBlue,
+	bgGreen,
+	bgRed,
+	bgYellow,
 	brandColor,
 	dim,
 	gray,
-	white,
-	red,
 	hidden,
-	bgRed,
-	bgYellow,
-	bgBlue,
-	bgGreen,
+	red,
+	white,
 } from "./colors";
 
 export const shapes = {

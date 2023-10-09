@@ -1,8 +1,8 @@
 import {
 	cp,
 	mkdtemp,
-	readFile,
 	readdir,
+	readFile,
 	rename,
 	rm,
 	writeFile,

@@ -1,4 +1,4 @@
-import { Project, deleteProject, listC3Projects } from "./common";
+import { deleteProject, listC3Projects, Project } from "./common";
 
 if (!process.env.CLOUDFLARE_API_TOKEN) {
 	console.error("CLOUDFLARE_API_TOKEN must be set");

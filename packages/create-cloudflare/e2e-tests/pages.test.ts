@@ -3,12 +3,12 @@ import { FrameworkMap } from "frameworks/index";
 import { readJSON } from "helpers/files";
 import { fetch } from "undici";
 import {
+	afterEach,
+	beforeAll,
+	beforeEach,
 	describe,
 	expect,
 	test,
-	afterEach,
-	beforeEach,
-	beforeAll,
 } from "vitest";
 import { deleteProject } from "../scripts/common";
 import { frameworkToTest } from "./frameworkToTest";

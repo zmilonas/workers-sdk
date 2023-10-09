@@ -1,11 +1,11 @@
 import { join } from "path";
 import {
+	afterEach,
+	beforeAll,
+	beforeEach,
 	describe,
 	expect,
 	test,
-	afterEach,
-	beforeEach,
-	beforeAll,
 } from "vitest";
 import { frameworkToTest } from "./frameworkToTest";
 import {
