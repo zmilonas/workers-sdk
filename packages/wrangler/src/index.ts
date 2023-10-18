@@ -342,7 +342,10 @@ export function createCLIParser(argv: string[]) {
 		"🚧`wrangler deployments` is a beta command. Please report any issues to https://github.com/cloudflare/workers-sdk/issues/new/choose";
 	wrangler.command(
 		"deployments",
-		"🔸List and view details for deployments for a Worker",
+		`🔸List and view details for deployments for a Worker ${highlight(
+			"open beta",
+			"#FF8800"
+		)}`,
 		(yargs) =>
 			yargs
 				.option("name", {
@@ -521,7 +524,7 @@ export function createCLIParser(argv: string[]) {
 	// hyperdrive
 	wrangler.command(
 		"hyperdrive",
-		"🔹Configure Hyperdrive databases",
+		`🔹Configure Hyperdrive databases ${highlight("open beta", "#FF8800")}`,
 		(hyperdriveYargs) => {
 			return hyperdrive(hyperdriveYargs.command(subHelp));
 		}
@@ -533,9 +536,13 @@ export function createCLIParser(argv: string[]) {
 	});
 
 	// d1
-	wrangler.command("d1", "🔹Manage Workers D1 databases", (d1Yargs) => {
-		return d1(d1Yargs.command(subHelp));
-	});
+	wrangler.command(
+		"d1",
+		`🔹Manage Workers D1 databases ${highlight("open beta", "#FF8800")}`,
+		(d1Yargs) => {
+			return d1(d1Yargs.command(subHelp));
+		}
+	);
 
 	// vectorize
 	wrangler.command(
