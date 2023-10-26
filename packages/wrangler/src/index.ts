@@ -521,6 +521,15 @@ export function createCLIParser(argv: string[]) {
 		return queues(queuesYargs.command(subHelp));
 	});
 
+  // d1
+	wrangler.command(
+		"d1",
+		`🔹Manage Workers D1 databases ${highlight("open beta", "#FF8800")}`,
+		(d1Yargs) => {
+			return d1(d1Yargs.command(subHelp));
+		}
+	);
+
 	// hyperdrive
 	wrangler.command(
 		"hyperdrive",
@@ -535,12 +544,11 @@ export function createCLIParser(argv: string[]) {
 		return ai(aiYargs.command(subHelp));
 	});
 
-	// d1
 	wrangler.command(
-		"d1",
-		`🔹Manage Workers D1 databases ${highlight("open beta", "#FF8800")}`,
-		(d1Yargs) => {
-			return d1(d1Yargs.command(subHelp));
+		"constellation",
+		"🔹Manage Constellation models",
+		(aiYargs) => {
+			return constellation(aiYargs.command(subHelp));
 		}
 	);
 
@@ -591,15 +599,6 @@ export function createCLIParser(argv: string[]) {
 		"🔹Manage dispatch namespaces",
 		(workerNamespaceYargs) => {
 			return workerNamespaceCommands(workerNamespaceYargs, subHelp);
-		}
-	);
-
-	// ai
-	wrangler.command(
-		"constellation",
-		"🔹Manage Constellation models",
-		(aiYargs) => {
-			return constellation(aiYargs.command(subHelp));
 		}
 	);
 
