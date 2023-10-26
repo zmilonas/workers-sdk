@@ -521,7 +521,7 @@ export function createCLIParser(argv: string[]) {
 		return queues(queuesYargs.command(subHelp));
 	});
 
-  // d1
+	// d1
 	wrangler.command(
 		"d1",
 		`🔹Manage Workers D1 databases ${highlight("open beta", "#FF8800")}`,
