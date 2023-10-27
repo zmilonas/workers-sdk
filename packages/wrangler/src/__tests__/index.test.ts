@@ -47,16 +47,16 @@ describe("wrangler", () => {
 			  wrangler kv:key                    🔹Manage individual Workers KV key-value pairs
 			  wrangler kv:bulk                   🔹Manage Workers KV key-value pairs in bulk
 			  wrangler queues                    🔹Manage Workers Queues
+			  wrangler d1                        🔹Manage Workers D1 databases open beta
 			  wrangler hyperdrive                🔹Configure Hyperdrive databases open beta
 			  wrangler ai                        🔹Manage AI models
-			  wrangler d1                        🔹Manage Workers D1 databases open beta
+			  wrangler constellation             🔹Manage Constellation models
 			  wrangler vectorize                 🔹Manage Vectorize indexes open beta
 			  wrangler r2                        🔹Manage R2 buckets & objects
 			  wrangler mtls-certificate          🔹Manage certificates used for mTLS connections
 			  wrangler pubsub                    🔹Manage Pub/Sub brokers private beta
 			  wrangler pages                     🔹Configure Cloudflare Pages applications
 			  wrangler dispatch-namespace        🔹Manage dispatch namespaces
-			  wrangler constellation             🔹Manage Constellation models
 			  wrangler login                     🔓Login to Cloudflare
 			  wrangler logout                    🔓Logout from Cloudflare
 			  wrangler whoami                    🔓Retrieve user info and test your auth config
@@ -103,16 +103,16 @@ describe("wrangler", () => {
 			  wrangler kv:key                    🔹Manage individual Workers KV key-value pairs
 			  wrangler kv:bulk                   🔹Manage Workers KV key-value pairs in bulk
 			  wrangler queues                    🔹Manage Workers Queues
+			  wrangler d1                        🔹Manage Workers D1 databases open beta
 			  wrangler hyperdrive                🔹Configure Hyperdrive databases open beta
 			  wrangler ai                        🔹Manage AI models
-			  wrangler d1                        🔹Manage Workers D1 databases open beta
+			  wrangler constellation             🔹Manage Constellation models
 			  wrangler vectorize                 🔹Manage Vectorize indexes open beta
 			  wrangler r2                        🔹Manage R2 buckets & objects
 			  wrangler mtls-certificate          🔹Manage certificates used for mTLS connections
 			  wrangler pubsub                    🔹Manage Pub/Sub brokers private beta
 			  wrangler pages                     🔹Configure Cloudflare Pages applications
 			  wrangler dispatch-namespace        🔹Manage dispatch namespaces
-			  wrangler constellation             🔹Manage Constellation models
 			  wrangler login                     🔓Login to Cloudflare
 			  wrangler logout                    🔓Logout from Cloudflare
 			  wrangler whoami                    🔓Retrieve user info and test your auth config
