@@ -1,5 +1,13 @@
 # wrangler
 
+## 3.17.1
+
+### Patch Changes
+
+- [#4474](https://github.com/cloudflare/workers-sdk/pull/4474) [`382ef8f5`](https://github.com/cloudflare/workers-sdk/commit/382ef8f580ab755d2706692e865b619953ef5671) Thanks [@mrbbot](https://github.com/mrbbot)! - fix: open browser to correct url pressing `b` in `--remote` mode
+
+  This change ensures Wrangler doesn't try to open `http://*` when `*` is used as the dev server's hostname. Instead, Wrangler will now open `http://127.0.0.1`.
+
 ## 3.17.0
 
 ### Minor Changes
